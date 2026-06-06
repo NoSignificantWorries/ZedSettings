@@ -1,0 +1,68 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {},
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space p": "project_panel::Toggle",
+      "space e": "project_panel::ToggleFocus",
+
+      "r": "project_panel::Rename",
+      "y": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "d": "project_panel::Delete",
+      "a": "project_panel::NewFile",
+      "x": "project_panel::Cut",
+    },
+  },
+  {
+    "context": "VimControl && vim_mode == insert && !menu",
+    "bindings": {
+      "alt enter": "editor::AcceptEditPrediction",
+    },
+  },
+  {
+    "context": "(VimControl || EmptyPane) && !menu",
+    "bindings": {
+      "space": null,
+      "space p": "project_panel::Toggle",
+      "space e": "project_panel::ToggleFocus",
+      "space o": "outline_panel::Toggle",
+      "space a": "outline_panel::ToggleFocus",
+      "space ;": "outline::Toggle",
+      "space ,": "workspace::ToggleRightDock",
+      "space f p": "projects::OpenRecent",
+      "space space": "file_finder::Toggle",
+      "space c v": "toolchain::Select",
+      "space c l": "lsp_tool::ToggleMenu",
+
+      "space r n": "editor::Rename",
+
+      "space b": "editor::ToggleBookmark",
+      "space B": "editor::ViewBookmarks",
+
+      "space t": "task::Spawn",
+
+      "] b": "editor::GoToNextBookmark",
+      "[ b": "editor::GoToPreviousBookmark",
+
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore",
+    },
+  },
+]
